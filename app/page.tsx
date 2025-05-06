@@ -153,7 +153,7 @@ export default function LandingPage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white text-white hover:bg-white/10 px-8"
+                    className="border-white bg-blue-900 text-white hover:bg-blue-900/10 px-8 hover:text-white"
                   >
                     Join Our Team
                   </Button>
@@ -416,7 +416,7 @@ export default function LandingPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white/10 px-8"
+                  className="border-white text-white bg-blue-900 hover:bg-blue-900/10 px-8 hover:text-white"
                 >
                   Join Our Agency
                 </Button>
