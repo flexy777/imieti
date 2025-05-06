@@ -12,6 +12,16 @@ import {
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { MobileMenu } from "@/components/mobile-menu";
+import { TypewriterText } from "@/components/typewriter-text"
+import { HeroSlideshow } from "@/components/hero-slideshow"
+
+// Hero slideshow images
+const heroImages = [
+  { src: "/ushers/usher7.jpeg", alt: "Professional models and ushers" },
+  { src: "/ushers/usher12.jpeg", alt: "Professional talent" },
+  { src: "/ushers/usher8.jpeg", alt: "Event ushers" },
+  { src: "/ushers/usher9.jpeg", alt: "Fashion models" },
+]
 
 // Featured talent data
 const featuredTalent = [
@@ -117,7 +127,7 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* Hero Section with Background */}
-        <section className="relative py-20 md:py-28 lg:py-36 overflow-hidden bg-navy-gradient text-white">
+        <section className="relative py-12 md:py-28 lg:py-36 overflow-hidden bg-navy-gradient text-white">
           <div className="absolute inset-0 bg-pattern-dots opacity-10"></div>
           <div className="absolute right-0 top-0 h-full w-1/3 bg-white/10 -skew-x-12 transform origin-top"></div>
           <div className="container px-4 md:px-6 relative">
@@ -125,7 +135,7 @@ export default function LandingPage() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-shadow">
-                    Connect, Contact and Contract Talents
+                  <TypewriterText text="Connect, Contact and Contract Talents" speed={80} />
                   </h1>
                   <p className="max-w-[600px] text-white/80 md:text-xl">
                     Imieti connects you with top-tier models and ushers for your
@@ -150,7 +160,8 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="relative lg:ml-auto">
-                <div className="relative h-[400px] w-full overflow-hidden rounded-xl border-4 border-white/20 shadow-xl">
+                {/* Desktop image */}
+                <div className="relative hidden md:block h-[400px] w-full overflow-hidden rounded-xl border-4 border-white/20 shadow-xl">
                   <Image
                     src="/ushers/usher7.jpeg"
                     alt="Professional models and ushers"
@@ -158,6 +169,10 @@ export default function LandingPage() {
                     className="object-cover"
                     priority
                   />
+                </div>
+                    {/* Mobile slideshow */}
+                        <div className="md:hidden">
+                  <HeroSlideshow images={heroImages} />
                 </div>
                 <div className="absolute -bottom-6 -left-6 h-24 w-24 bg-white rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-primary font-bold text-sm text-center">
