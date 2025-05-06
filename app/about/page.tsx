@@ -164,10 +164,15 @@ export default function AboutPage() {
                   <p className="text-xl font-medium text-primary mb-4">
                     Connect, Contact and Contract the person(s) you want within minutes
                   </p>
-                  <div className="flex items-center justify-center gap-2 text-primary">
+                  <a
+                    href="https://wa.me/2348088561126"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                  >
                     <MessageSquare className="h-5 w-5" />
                     <span className="font-medium">WhatsApp +234 808 856 1126 for assistance</span>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
