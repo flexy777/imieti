@@ -1,0 +1,40 @@
+/* Custom styles for terms and conditions */
+.terms-container h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0a2463;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(10, 36, 99, 0.2);
+  }
+  
+  .terms-container h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0a2463;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .terms-container h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgba(10, 36, 99, 0.9);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .terms-container p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+  
+  .terms-container .section-content {
+    padding-left: 1rem;
+  }
+  
+  .terms-container .section-divider {
+    margin: 2rem 0;
+    border-top: 1px solid rgba(10, 36, 99, 0.1);
+  }
+  
