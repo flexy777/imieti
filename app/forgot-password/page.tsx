@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { Logo } from "@/components/logo"
 import { MobileMenu } from "@/components/mobile-menu"
 
@@ -8,7 +10,7 @@ export default function ForgotPasswordPage() {
     <div className="min-h-screen flex flex-col">
       {/* Navigation */}
       <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm py-3">
-        <div className="container flex items-center h-16 justify-between">
+      <div className="container flex items-center h-16 justify-between">
         <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center space-x-2">
               <span className="text-2xl font-bold tracking-tight text-primary">
@@ -19,7 +21,6 @@ export default function ForgotPasswordPage() {
               </span>
             </Link>
           </div>
-
           {/* Mobile menu */}
           <div className="md:hidden">
             <MobileMenu />
@@ -67,16 +68,21 @@ export default function ForgotPasswordPage() {
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="bg-primary p-6 text-white text-center">
               <h1 className="text-2xl font-bold">Forgot Password</h1>
-              <p className="text-white/80 mt-2">Reset your password</p>
+              <p className="text-white/80 mt-2">Reset your member password</p>
             </div>
             <div className="p-6">
-              <div className="text-center py-4">
-                <p className="text-primary/70 mb-6">
-                  This is a placeholder for the password reset form. The actual form will be implemented based on your
-                  requirements.
-                </p>
-                <Link href="/members-login">
-                  <Button className="bg-primary text-white hover:bg-primary/90">Back to Login</Button>
+              <form className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email Address</Label>
+                  <Input id="email" type="email" placeholder="Enter your email address" required />
+                </div>
+                <Button type="submit" className="w-full bg-primary text-white hover:bg-primary/90">
+                  Reset Password
+                </Button>
+              </form>
+              <div className="mt-6 text-center">
+                <Link href="/members-login" className="text-primary hover:underline text-sm">
+                  Back to Login
                 </Link>
               </div>
             </div>

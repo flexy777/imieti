@@ -23,8 +23,8 @@ export function TermsAndConditions() {
   }
 
   const handleAccept = () => {
-    // Navigate to registration page
-    router.push("/members-register")
+    // Navigate to packages page instead of registration
+    router.push("/members-packages")
   }
 
   return (
@@ -36,6 +36,7 @@ export function TermsAndConditions() {
         onScroll={handleScroll}
         className="terms-container prose prose-sm max-w-none h-[400px] overflow-y-auto border border-primary/10 rounded-md p-4 bg-secondary/20"
       >
+        {/* Terms content remains the same */}
         <h2 className="text-2xl font-bold text-primary mb-6 pb-2 border-b border-primary/20">
           Terms and Conditions for use of imieti.com.ng
         </h2>
@@ -195,7 +196,7 @@ export function TermsAndConditions() {
           disabled={!hasScrolledToBottom}
           className="bg-primary text-white hover:bg-primary/90"
         >
-          {hasScrolledToBottom ? "Accept Terms & Continue to Registration" : "Please scroll to the end to continue"}
+          {hasScrolledToBottom ? "Accept Terms & Continue" : "Please scroll to the end to continue"}
         </Button>
       </div>
     </div>
